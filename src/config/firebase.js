@@ -1,4 +1,4 @@
-var firebaseConfig = {
+export default {
     apiKey: "AIzaSyDvncTppVaXM3iOSqchXYs74JG7QTRqfoc",
     authDomain: "imms-encuestas.firebaseapp.com",
     projectId: "imms-encuestas",
