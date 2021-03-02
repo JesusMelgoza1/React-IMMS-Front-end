@@ -3,8 +3,12 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Login from './components/login/login';
-import SignUp from './components/registro/SignUp';
+
+import Login from "./views/Login"
+import Registro from "./views/Registro"
+import Dashboard from "./views/Dashboard"
+
+
 
 
 export default function App() {
@@ -14,13 +18,22 @@ export default function App() {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/" exact>
-            <Login />
+            <Login/>
           </Route>
           <Route path="/registro">
-            <SignUp />
+            <Registro/>
           </Route>
+          <Route path="/dashboard">
+            <Dashboard/>
+          </Route>
+
+          {/* <Route path="/registro">
+            <SignUp/>
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard/>
+          </Route> */}
         </Switch>
-     
     </Router>
   );
 }
