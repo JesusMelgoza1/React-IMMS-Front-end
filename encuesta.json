@@ -1,0 +1,19 @@
+{
+    "Encuesta 1":{
+    "Guía de Referencia II IDENTIFICACIÓN Y ANÁLISIS DE LOS FACTORES DE RIESGO PSICOSOCIAL":{
+
+          "preguntas":{
+             "Mi trabajo me exige hacer mucho esfuerzo físico":{
+                "respuestas":[
+                   "SIEMPRE",
+                   "CASI SIEMPRE",
+                   "ALGUNAS VECES",
+                   "CASI NUNCA",
+                   "NUNCA"
+                ],
+                "ponderacion":[4,3,2,1,0]
+                 }
+             }
+        }
+    }
+}

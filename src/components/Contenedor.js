@@ -4,6 +4,9 @@ import Cajon from './Cajon';
 import personas from "../assets/img/personas.png";
 import grafica from "../assets/img/grafica.png";
 import Theme from "./TemaConfig"
+import Dialog from "./Dialog"
+
+// import  { Link } from  'react-router-dom';
 import {
     Hidden,
     makeStyles,
@@ -13,6 +16,9 @@ import {
     Button,
     ThemeProvider
 } from '@material-ui/core'
+
+// import { useHistory } from "react-router-dom";
+
 
 const estilos = makeStyles(theme =>({
     root:{
@@ -58,17 +64,46 @@ export default function Contenedor()  {
     const classes = estilos()
     const [abrir, setAbrir] = useState(false)
     const [muestra, setMuestra] = useState(0)
+    const [muestraObtenida, setMuestraObtenida] = useState(0)
     const [numEmpleados, setnumEmpleados] = useState(0)
-    // muestra --> nos permite acceder al valor .... setMuestra -> nos permite hacer cambios al valor;
+
+    // let history = useHistory()
+    // // muestra --> nos permite acceder al valor .... setMuestra -> nos permite hacer cambios al valor;
 
     const accionAbrir = () =>{
         setAbrir(!abrir)
     }
     
     const calcularMuestra = () => {
-        let muestraObtenida = (0.9604*muestra)/(0.0025*(muestra-1)+0.9604)
-        setnumEmpleados(Math.round(muestraObtenida))
+        let empleados = (0.9604*muestra)/(0.0025*(muestra-1)+0.9604)
+        setnumEmpleados(Math.round(empleados))
+        setMuestraObtenida(muestra)
     }
+    // const submitEncuesta = (encuesta) =>{
+    //     // creamos el item dentro de local storage, para saber que 
+    //     // encuesta vamosa  renderizar
+    //     localStorage.setItem('encuesta', encuesta);
+    //     //hacemos un redirect al endopoint /encuesta
+    //     history.push('/datosEncuestado');
+    // }
+    const submitDatosEncuestado = () =>{
+        // creamos el item dentro de local storage, para saber que 
+        // encuesta vamosa  renderizar
+        // localStorage.setItem('encuesta', encuesta);
+        //hacemos un redirect al endopoint /encuesta
+        setOpen(true);
+        // history.push('/datos');
+    }
+
+    const [open, setOpen] = useState(false);
+
+    // const handleClickOpen = () => {
+      
+    // };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
 
     
     //Este es el contenedor del lado izquierdo de la pantalla, 
@@ -109,6 +144,7 @@ export default function Contenedor()  {
                             label="Numero de trabajadores"
                             variant="outlined" 
                             onChange={(e)=>  setMuestra(e.target.value)}
+                            
                              
                              />
                             <Button
@@ -122,6 +158,10 @@ export default function Contenedor()  {
                             </Button>
                         </form>
                     </Box>
+                    <Dialog
+                    open={open}
+                    handleClose={handleClose}
+                    />
                 </Grid>
             </Grid>
 
@@ -150,6 +190,9 @@ export default function Contenedor()  {
                 </Grid>
             </Grid>
 
+
+
+
             {/* Esta parte es donde nos arroja el boton para saber cual encuesta debemos aplicar  */}
             <Grid container>
                 <Grid item xs={6} sm={6}  >
@@ -157,13 +200,13 @@ export default function Contenedor()  {
                         <form>
                             <h3>Se debe de aplicar la encuesta:</h3>
                             {
-                                numEmpleados > 0 && numEmpleados <= 14 && <Button className={classes.btn}> Encuesta 1</Button>
+                                muestraObtenida > 0 && muestraObtenida <= 15 &&   <Button className={classes.btn} onClick={()=> submitDatosEncuestado('uno')}  >Encuesta 1</Button> 
                             }
                             {
-                                numEmpleados >= 15 && numEmpleados <= 50 && <Button className={classes.btn}> Encuesta 2</Button>
+                                muestraObtenida >= 16 && muestraObtenida <= 50 &&  <Button className={classes.btn} onClick={()=> submitDatosEncuestado('dos')}>Encuesta 2</Button> 
                             }
-                             {
-                                numEmpleados > 51 && numEmpleados <= 1000 && <Button className={classes.btn}> Encuesta 3</Button>
+                            {
+                                muestraObtenida >= 51  && <Button className={classes.btn} onClick={()=> submitDatosEncuestado('tres')}>Encuesta 3</Button> 
                             }
 
 

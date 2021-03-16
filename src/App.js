@@ -3,15 +3,18 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-
 import Login from "./views/Login"
 import Registro from "./views/Registro"
 import Dashboard from "./views/Dashboard"
-
-
+import Encuesta from "./components/Encuesta";
+import DatosEncuestado from "./components/DatosEncuestado";
+import FormDialog from "./components/Dialog";
 
 
 export default function App() {
+  
+  
+  
   return (
     <Router>
         {/* A <Switch> looks through its children <Route>s and
@@ -26,13 +29,17 @@ export default function App() {
           <Route path="/dashboard">
             <Dashboard/>
           </Route>
-
-          {/* <Route path="/registro">
-            <SignUp/>
+          <Route path="/encuesta">
+            <Encuesta/>
           </Route>
-          <Route path="/dashboard">
-            <Dashboard/>
-          </Route> */}
+          <Route path="/datosEncuestado">
+            <DatosEncuestado/>
+          </Route>
+          <Route path="/datos">
+            <FormDialog/>
+          </Route>
+
+
         </Switch>
     </Router>
   );
