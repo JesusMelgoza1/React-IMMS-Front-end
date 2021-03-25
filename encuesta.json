@@ -12,7 +12,17 @@
                    "NUNCA"
                 ],
                 "ponderacion":[4,3,2,1,0]
-                 }
+                 },
+                 "Mi trabajo me exige hacer mucho esfuerzo físicologico":{
+                    "respuestas":[
+                       "SIEMPRE",
+                       "CASI SIEMPRE",
+                       "ALGUNAS VECES",
+                       "CASI NUNCA",
+                       "NUNCA"
+                    ],
+                    "ponderacion":[4,3,2,1,0]
+                    }
              }
         }
     }

@@ -18,6 +18,10 @@ import "@firebase/firestore";
 import {
     useFirestore
   } from 'reactfire';
+import { useHistory } from "react-router-dom";
+
+
+
 const useStyles = makeStyles((theme) => ({
     paper: {
         position: "absolute",
@@ -48,6 +52,7 @@ export default function FormDialog({open, handleClose}) {
     
     const firestore = useFirestore();
     const encuestadoCollection = firestore.collection('DatosEncuestado')
+    let history = useHistory();
 
     const classes = useStyles();
     const [formData, setFormData] = useState({"Sexo": "","Edad en años":"", "Estado Civil": "",
@@ -58,11 +63,17 @@ export default function FormDialog({open, handleClose}) {
                                          "Tipo Puesto": "", "Tipo Contratacion": "", "Tipo de Personal": "", 
                                          "Tipo de Jornada de Trabajo": "", "Realiza Rotaciones": "", "Tiempo en puesto Actual": "",
                                          "Tiempo experiencia laboral": ""})
-                            
+    
 
     const handleSubmit = (e) => {
         e.preventDefault();
         encuestadoCollection.add(formData)
+        history.push("/encuesta");
+    }
+
+    const handlecerrar = (e) => {
+        e.preventDefault();
+        history.push('/encuesta')
     }
     return (
         <ThemeProvider theme={Theme} >
@@ -250,7 +261,7 @@ export default function FormDialog({open, handleClose}) {
                 </FormControl>
 
                 <DialogActions>
-                    <Button onClick={handleClose} color="primary">
+                    <Button onClick={handlecerrar} color="primary">
                         Cancelar
           </Button>
                     <Button color="primary" onClick={handleSubmit}>

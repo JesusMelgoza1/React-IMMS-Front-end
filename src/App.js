@@ -6,7 +6,7 @@ import {
 import Login from "./views/Login"
 import Registro from "./views/Registro"
 import Dashboard from "./views/Dashboard"
-import Encuesta from "./components/Encuesta";
+import Encuesta from "./views/Encuesta";
 import DatosEncuestado from "./components/DatosEncuestado";
 import FormDialog from "./components/Dialog";
 

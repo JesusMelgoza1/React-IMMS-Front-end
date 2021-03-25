@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import {useFirebaseApp} from 'reactfire';
+import { useHistory } from "react-router-dom";
 import 'firebase/auth';
 
 const useStyles = makeStyles((theme) => ({
@@ -37,11 +38,13 @@ export default function ComponentRegistro() {
   const firebase = useFirebaseApp();
   const [email, setemail] = useState('');
   const [contrasena, setcontrasena] = useState('');
+  let history = useHistory();
 
   const submit = async (event) =>{
     console.log(email, contrasena);
     event.preventDefault();
      await firebase.auth().createUserWithEmailAndPassword(email,contrasena);
+     history.push('/');
   }
 
   
@@ -88,6 +91,8 @@ export default function ComponentRegistro() {
             color="primary"
             className={classes.submit}
             onClick={submit}
+          
+            
           >
             Registrar
           </Button>
