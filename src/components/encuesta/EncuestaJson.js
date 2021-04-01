@@ -19,6 +19,30 @@ export const preg = [{
             'ponderacion':['1','2','3'],
             'seccion':'Primera sección'
         },
+        {
+            'pregunta':'¿Cuantos hermanos tienes?',
+            'respuesta':['1','10','25'],
+            'ponderacion':['1','2','3'],
+            'seccion':'Primera sección'
+        },
+        {
+            'pregunta':'¿Cuantos hermanos tienes?',
+            'respuesta':['1','10','25'],
+            'ponderacion':['1','2','3'],
+            'seccion':'segunda sección'
+        },
+        {
+            'pregunta':'¿Cuantos hermanos tienes?',
+            'respuesta':['1','10','25'],
+            'ponderacion':['1','2','3'],
+            'seccion':'segunda sección'
+        },
+        {
+            'pregunta':'¿Cuantos hermanos tienes?',
+            'respuesta':['1','10','25'],
+            'ponderacion':['1','2','3'],
+            'seccion':'segunda sección'
+        },
 
     ]
 
