@@ -9,6 +9,7 @@ import Dashboard from "./views/Dashboard"
 import Encuesta from "./views/Encuesta";
 import DatosEncuestado from "./components/DatosEncuestado";
 import FormDialog from "./components/Dialog";
+import Test from "./components/encuesta/Test";
 
 
 export default function App() {
@@ -37,6 +38,9 @@ export default function App() {
           </Route>
           <Route path="/datos">
             <FormDialog/>
+          </Route>
+          <Route path="/test">
+            <Test/>
           </Route>
 
 
