@@ -20,6 +20,7 @@ export const encuesta1 = [{
             'seccion':'I.- Acontecimiento traumático severo'
         },
         {
+<<<<<<< HEAD
             'pregunta':'¿Secuestro?',
             'respuesta':['SI','NO'],
             'ponderacion':['1','2'],
@@ -123,6 +124,31 @@ export const encuesta1 = [{
         },
         
     ]
+=======
+            'pregunta':'¿Cuantos hermanos tienes?',
+            'respuesta':['1','10','25'],
+            'ponderacion':['1','2','3'],
+            'seccion':'Primera sección'
+        },
+        {
+            'pregunta':'¿Cuantos hermanos tienes?',
+            'respuesta':['1','10','25'],
+            'ponderacion':['1','2','3'],
+            'seccion':'segunda sección'
+        },
+        {
+            'pregunta':'¿Cuantos hermanos tienes?',
+            'respuesta':['1','10','25'],
+            'ponderacion':['1','2','3'],
+            'seccion':'segunda sección'
+        },
+        {
+            'pregunta':'¿Cuantos hermanos tienes?',
+            'respuesta':['1','10','25'],
+            'ponderacion':['1','2','3'],
+            'seccion':'segunda sección'
+        },
+>>>>>>> db8953d83aa91ca4763ef9b1288a02f6d71b2c56
 
 }]
 
