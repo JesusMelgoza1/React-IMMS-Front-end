@@ -89,7 +89,7 @@ export default function FormDialog({open, handleClose}) {
                     <Toolbar align="center">
                         <Typography variant="h6" align="center">
                             Datos del trabajador
-            </Typography>
+                        </Typography>
                     </Toolbar>
                 </AppBar>
 

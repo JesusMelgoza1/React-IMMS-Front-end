@@ -1,13 +1,81 @@
 
-
-const Encuesta1 = {
+export const Encuesta1 = {
     pregunta: "Pregunta1",
     respuesta:['si','no'],
     ponderacion:['1','2']
 
     }
 
-const Encuesta11 ={
+export const EncuestaPrueba ={
+       Encuesta: "Guia de referencia1",
+       "secciones":{
+          "seccion1":{
+             "preguntas":{
+                "Descripcion Pregunta1":{
+                   respuestas: ["si", "no"],
+                   ponderacion: "none"
+                },
+                "Descripcion Pregunta2":{
+                   respuestas: ["si", "no"],
+                   ponderacion: "none"
+                },
+                "Descripcion Pregunta3":{
+                   respuestas: ["si", "no"],
+                   ponderacion: "none"
+                },
+                "Descripcion Pregunta4":{
+                   respuestas: ["si", "no"],
+                   ponderacion: "none"
+                },
+                "Descripcion Pregunta5":{
+                   respuestas: ["si", "no"],
+                   ponderacion: "none"
+                },
+                "Descripcion Pregunta6":{
+                   respuestas: ["si", "no"],
+                   ponderacion: "none"
+                },
+                "Descripcion Pregunta7":{
+                   respuestas: ["si", "no"],
+                   ponderacion: "none"
+                }
+             }
+          },
+          "seccion2":{
+            "preguntas":{
+               "Descripcion Pregunta1":{
+                  respuestas: ["si", "no"],
+                  ponderacion: "none"
+               },
+               "Descripcion Pregunta2":{
+                  respuestas: ["si", "no"],
+                  ponderacion: "none"
+               },
+               "Descripcion Pregunta3":{
+                  respuestas: ["si", "no"],
+                  ponderacion: "none"
+               },
+               "Descripcion Pregunta4":{
+                  respuestas: ["si", "no"],
+                  ponderacion: "none"
+               },
+               "Descripcion Pregunta5":{
+                  respuestas: ["si", "no"],
+                  ponderacion: "none"
+               },
+               "Descripcion Pregunta6":{
+                  respuestas: ["si", "no"],
+                  ponderacion: "none"
+               },
+               "Descripcion Pregunta7":{
+                  respuestas: ["si", "no"],
+                  ponderacion: "none"
+               }
+            }
+          }
+       }
+    }
+export  const Encuesta11 ={
     "Encuesta1":{
         "Guía_de_Referencia_I_EJEMPLO_DE_CUESTIONARIO_PARA_IDENTIFICAR_A_LOS_TRABAJADORES_QUE_FUERON_SUJETOS_A_ACONTECIMIENTOS_TRAUMÁTICOS_SEVEROS":{
             "seccion1":{
@@ -181,7 +249,7 @@ const Encuesta11 ={
 }
 
 
-const Encuesta2 ={
+export const Encuesta2 ={
         "Encuesta2":{
         "Guia de Referencia II IDENTIFICACION Y ANALISIS DE LOS FACTORES DE RIESGO PSICOSOCIAL":{
             "preguntas":{
@@ -653,7 +721,7 @@ const Encuesta2 ={
 }
 
 
-const Encuesta3 ={
+export const Encuesta3 ={
     "Encuesta3":{
     "Guía de Referencia III IDENTIFICACIÓN Y ANÁLISIS DE LOS FACTORES DE RIESGO PSICOSOCIAL Y EVALUACIÓN DEL ENTORNO ORGANIZACIONAL EN LOS CENTROS DE TRABAJO":{
         "preguntas":{
@@ -1387,7 +1455,7 @@ const Encuesta3 ={
 
 
 
-export default Encuesta1 
+
 
 
 

@@ -5,6 +5,8 @@ import personas from "../assets/img/personas.png";
 import grafica from "../assets/img/grafica.png";
 import Theme from "./TemaConfig"
 import Dialog from "./Dialog"
+// import Encuesta from "../views/Encuesta"
+// import Prueba from './encuesta/prueba'
 
 // import  { Link } from  'react-router-dom';
 import {
@@ -79,28 +81,15 @@ export default function Contenedor()  {
         setnumEmpleados(Math.round(empleados))
         setMuestraObtenida(muestra)
     }
-    // const submitEncuesta = (encuesta) =>{
-    //     // creamos el item dentro de local storage, para saber que 
-    //     // encuesta vamosa  renderizar
-    //     localStorage.setItem('encuesta', encuesta);
-    //     //hacemos un redirect al endopoint /encuesta
-    //     history.push('/datosEncuestado');
-    // }
+  
     const submitDatosEncuestado = () =>{
-        // creamos el item dentro de local storage, para saber que 
-        // encuesta vamosa  renderizar
-        // localStorage.setItem('encuesta', encuesta);
-        //hacemos un redirect al endopoint /encuesta
+       
         setOpen(true);
         // history.push('/datos');
     }
 
     const [open, setOpen] = useState(false);
 
-    // const handleClickOpen = () => {
-      
-    // };
-  
     const handleClose = () => {
       setOpen(false);
     };
@@ -147,6 +136,7 @@ export default function Contenedor()  {
                             
                              
                              />
+                            {/* <Prueba setMuestra={setMuestra}/> */}
                             <Button
                             variant="contained" 
                             color="primary" 
