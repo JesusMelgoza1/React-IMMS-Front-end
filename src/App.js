@@ -9,6 +9,7 @@ import Dashboard from "./views/Dashboard"
 import Encuesta from "./views/Encuesta";
 import DatosEncuestado from "./components/DatosEncuestado";
 import FormDialog from "./components/Dialog";
+import Seccion from "./components/encuesta/Seccion";
 
 
 
@@ -38,6 +39,9 @@ export default function App() {
           </Route>
           <Route path="/datos">
             <FormDialog/>
+          </Route>
+          <Route path="/sec">
+            <Seccion/>
           </Route>
         </Switch>
     </Router>

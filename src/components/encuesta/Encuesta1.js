@@ -59,22 +59,24 @@ const Encuesta1 = () => {
             </>
         )
     });
-    const pageCount = Math.ceil()
+    // const pageCount = Math.ceil()
     
-    return (
+    // return (
         
-        <div>
-            {displayPreguntas} 
-            <ReactPaginate
-             previousLabel={"Anterior"}
-             nextLabel={"Siguiente"}
-             pageCount={}
+    //     <div>
+    //         {displayPreguntas} 
+    //         <ReactPaginate
+    //          previousLabel={"Anterior"}
+    //          nextLabel={"Siguiente"}
+
              
-            />
+    //         />
         
-        </div>
+    //     </div>
         
-    )
+    // )
 
  }
 export default Encuesta1
+
+
